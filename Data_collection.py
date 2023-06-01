@@ -52,7 +52,9 @@ while pg != 1000:
 
 gross_dict = {'Id': ids, 'Title': titles, 'Ww_gross': ww_gross, 'Dom_gross': dom_gross, 'Fore_gross': fore_gross, 'Year': years}
 mojo_df = pd.DataFrame(gross_dict)
-
+#%%
+mojo_df.to_csv('Mojo_df.csv')
+mojo_df.head(10)
 #%%
 # collect details and information on movies for imdb
 imdb = IMDB()
@@ -88,6 +90,7 @@ def get_ratings(details):
         rate_count, best_rate, worst_rate, rate_value = 'null', 'null', 'null', 'null'
     else:
         ratings = details[1]
+        #print(ratings)
         rate_count, best_rate, worst_rate, rate_value = ratings.split(',')
 
     return rate_count, best_rate, worst_rate, rate_value
@@ -139,7 +142,7 @@ for id in ids:
     rate_count, best_rate, worst_rate, rate_value = get_ratings(details)
     cont_rate, genre, release, keywrds, rt, actor, director, creator = join_get_features(details)
 
-    descriptions.append(descriptions)
+    descriptions.append(description)
     rating_count.append(rate_count)
     best_rating.append(best_rate)
     worst_rating.append(worst_rate)
@@ -159,8 +162,16 @@ for id in ids:
 info_dict = {'Descriptions': descriptions, 'Rating_cnt': rating_count, 'Best_rating': best_rating, 'Worst_rating': worst_rating, 'Rating_value':rating_value, 'Content_rating':content_rating, 'Genres':genres, 'Release': release_date,
              'Keywords': keywords, 'Runtime': runtime, 'Actors': actors, 'Directors': directors, 'Creators': creators}
 imdb_df = pd.DataFrame(info_dict)
-
-
+imdb_df.to_csv('IMDB_df.csv')
+#%%
+desc_dict = {'Descriptions': descriptions}
+imdb_desc = pd.DataFrame(desc_dict)
+#%%
+imdb_desc.to_csv('IMDB_descriptions.csv')
+imdb_desc.head(1)
+#%%
+imdb_df.head()
+#%%
 
 # what information do we want for imdb?
 '''
@@ -174,8 +185,9 @@ director
 '''
 # clean csv and then combine
 #%%
-mojo_df.to_csv('Mojo_df.csv')
-imdb_df.to_csv('IMDB_df.csv')
+df1 = pd.read_csv('IMDB_df.csv')
+#%%
+df1.head()
 #%%
 dict = {'Id': ids, 'Title': titles, 'Ww_gross': ww_gross, 'Dom_gross': dom_gross, 'Fore_gross': fore_gross,
         'Year': years, 'Descriptions': descriptions, 'Rating_cnt': rating_count, 'Best_rating': best_rating,
