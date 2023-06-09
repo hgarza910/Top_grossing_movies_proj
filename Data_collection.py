@@ -127,42 +127,55 @@ def get_features(feats):
         print(x)
     return cont_rate, genre, release, keywrds, rt
 
-
 def get_production_team(team):
     actor, director, creator = team.split('],')
     return actor, director, creator
 
 #%%
-for id in ids:
-    print(id)
-    movie = imdb.get_by_id(id)
-    details = movie.split('},')
+def collect_imdb_info(ids):
+    descriptions = []
+    rating_count = []
+    rating_value = []
+    best_rating = []
+    worst_rating = []
+    content_rating = []
+    genres = []
+    release_date = []
+    keywords = []
+    runtime = []
+    actors = []
+    directors = []
+    creators = []
 
-    description = get_description(details)
-    rate_count, best_rate, worst_rate, rate_value = get_ratings(details)
-    cont_rate, genre, release, keywrds, rt, actor, director, creator = join_get_features(details)
+    for id in ids:
+        print(id)
+        movie = imdb.get_by_id(id)
+        details = movie.split('},')
 
-    descriptions.append(description)
-    rating_count.append(rate_count)
-    best_rating.append(best_rate)
-    worst_rating.append(worst_rate)
-    rating_value.append(rate_value)
-    content_rating.append(cont_rate)
-    genres.append(genre)
-    release_date.append(release)
-    keywords.append(keywrds)
-    runtime.append(rt)
-    actors.append(actor)
-    directors.append(director)
-    creators.append(creator)
+        description = get_description(details)
+        rate_count, best_rate, worst_rate, rate_value = get_ratings(details)
+        cont_rate, genre, release, keywrds, rt, actor, director, creator = join_get_features(details)
 
+        descriptions.append(description)
+        rating_count.append(rate_count)
+        best_rating.append(best_rate)
+        worst_rating.append(worst_rate)
+        rating_value.append(rate_value)
+        content_rating.append(cont_rate)
+        genres.append(genre)
+        release_date.append(release)
+        keywords.append(keywrds)
+        runtime.append(rt)
+        actors.append(actor)
+        directors.append(director)
+        creators.append(creator)
+    info_dict = {'Descriptions': descriptions, 'Rating_cnt': rating_count, 'Best_rating': best_rating, 'Worst_rating': worst_rating, 'Rating_value':rating_value, 'Content_rating':content_rating, 'Genres':genres, 'Release': release_date,
+                 'Keywords': keywords, 'Runtime': runtime, 'Actors': actors, 'Directors': directors, 'Creators': creators}
+    imdb_df = pd.DataFrame(info_dict)
+    return imdb_df
 
-
-#%%
-info_dict = {'Descriptions': descriptions, 'Rating_cnt': rating_count, 'Best_rating': best_rating, 'Worst_rating': worst_rating, 'Rating_value':rating_value, 'Content_rating':content_rating, 'Genres':genres, 'Release': release_date,
-             'Keywords': keywords, 'Runtime': runtime, 'Actors': actors, 'Directors': directors, 'Creators': creators}
-imdb_df = pd.DataFrame(info_dict)
-imdb_df.to_csv('IMDB_df.csv')
+'''
+#imdb_df.to_csv('IMDB_df.csv')
 #%%
 desc_dict = {'Descriptions': descriptions}
 imdb_desc = pd.DataFrame(desc_dict)
@@ -173,16 +186,7 @@ imdb_desc.head(1)
 imdb_df.head()
 #%%
 
-# what information do we want for imdb?
-'''
-description - index 4 should be description
-ratings - rating count, best rating, worst rating, rating value
-rating count
-content rating - ie pg-13
-genre
-actors
-director
-'''
+
 # clean csv and then combine
 #%%
 df1 = pd.read_csv('IMDB_df.csv')
@@ -198,3 +202,22 @@ dict = {'Id': ids, 'Title': titles, 'Ww_gross': ww_gross, 'Dom_gross': dom_gross
 df = pd.DataFrame(dict)
 #%%
 df.to_csv("Top_grossing_movies.csv")
+
+#%%
+movie = imdb.get_by_id('tt2109248')
+#%%
+df = pd.read_csv('Top_grossing_movies.csv')
+missing = df[df['Descriptions'].isnull() ]
+#%%
+id2 = missing['Id']
+#%%
+info_dict = {'Descriptions': descriptions, 'Rating_cnt': rating_count, 'Best_rating': best_rating, 'Worst_rating': worst_rating, 'Rating_value':rating_value, 'Content_rating':content_rating, 'Genres':genres, 'Release': release_date,
+             'Keywords': keywords, 'Runtime': runtime, 'Actors': actors, 'Directors': directors, 'Creators': creators}
+imdb_missing_df = pd.DataFrame(info_dict)
+#%%
+# df is messed up bc of indexing
+imdb_fixed = pd.DataFrame(data=imdb_missing_df)
+#%%
+imdb_fixed['Descriptions'] = imdb_missing_df['Descriptions']
+#%%
+'''
