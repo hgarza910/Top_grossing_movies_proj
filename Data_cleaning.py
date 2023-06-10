@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-df = pd.read_csv("Top_grossing_movies.csv")
-
+#df = pd.read_csv("Top_grossing_movies.csv")
+df =pd.read_csv('Top_grossing_movies_cleaned.csv', index_col=0)
 #%%
 # Fill in missing movies - sometimes api doesn't collect all movies
 num_missing = df.isnull().sum()
@@ -116,5 +116,7 @@ df = df.drop(columns=['Unnamed: 0','Genres','Actors','Directors','Creators'], ax
 df.dtypes
 df.head()
 #%%
-
+df = df.drop(columns=['Unnamed: 0'], axis=1)
+#%%
 df.to_csv('Top_grossing_movies_cleaned.csv')
+#%%
