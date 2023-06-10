@@ -9,7 +9,7 @@ The motivation for this project was my passion for film and it's art. I also wan
 ## Data Collection and Cleaning
 ### Web-Scraping with Beautiful Soup
 I utilized web-scraping techniques with Beautiful Soup a popular python package for parsing html. The Data extracted was from [boxofficemojo.com], specifically i scraped the top 1000 grossing movie Id's, Titles, and their respective Gross Earning from three categories: Worldwide Gross Earnings, Domestic Gross Earnings, and Foreign Gross Earnings. The collected data was stored in a dataframe to be joined later. 
-** insert pic
+![](Images/mojo_df.png)
 ### PyMovieDB
 To gather additional inormation about the top grossing movies, I made use of the PyMovieDb API. Using the Id's of the movies collected from BoxOfficeMojo I was able to retrieve deatials from IMDB such as Descriptions, Ratings, Keywords, Genres and Film Crew. This provided a more detailed dataset on each movie.
 ** insert pic
