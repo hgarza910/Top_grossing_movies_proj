@@ -26,7 +26,7 @@ The collected data was organized and cleaned using the Pandas library in Python.
 * Creators - Removed unnecessary string values and seperated into 3 seperate values.
 ![](Images/top_grossing_cleaned_df.png)
 ## Exploritory Data Analysis (EDA) with Tableau
-To visually represent the insights gained from the data analysis, I built a dashboard using Tableau. The dashboard incorperated dynamic visualizations such as barcharts, line graphs and pie charts comparing the Gross Earnings of movies to multiple different variables such as release dates, genres, actors, directors and creators. These visual representations provide an intuitive way to interpret the data and communicate the results effectively. Here is a link to the dashboard with a snapshot shown below. (link)
+To visually represent the insights gained from the data analysis, I built a dashboard using Tableau. The dashboard incorperated dynamic visualizations such as barcharts, line graphs and pie charts comparing the Gross Earnings of movies to multiple different variables such as release dates, genres, actors, directors and creators. These visual representations provide an intuitive way to interpret the data and communicate the results effectively. 
 ![](Images/Top_grossing_movies_dashboard.png)
 
 ## IBM Database Integration
