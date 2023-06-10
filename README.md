@@ -12,7 +12,7 @@ I utilized web-scraping techniques with Beautiful Soup a popular python package 
 ![](Images/mojo_df.png)
 ### PyMovieDB
 To gather additional inormation about the top grossing movies, I made use of the PyMovieDb API. Using the Id's of the movies collected from BoxOfficeMojo I was able to retrieve deatials from IMDB such as Descriptions, Ratings, Keywords, Genres and Film Crew. This provided a more detailed dataset on each movie.
-** insert pic
+![](Images/imdb_df.png)
 ### Data Processing and Cleaning
 The collected data was organized and cleaned using the Pandas library in Python. The cleaning process involved handling missing values, removing duplicates and stadardizing formats.
 * Gross Earnings - Converted into numeric values.
@@ -24,21 +24,21 @@ The collected data was organized and cleaned using the Pandas library in Python.
 * Actors - Removed unnecessary string values and seperated int0 3 seperate values.
 * Directors - Removed unnecessary string values and seperated into 3 seperate values.
 * Creators - Removed unnecessary string values and seperated into 3 seperate values.
-
+![](Images/top_grossing_cleaned_df.png)
 ## Exploritory Data Analysis (EDA) with Tableau
 To visually represent the insights gained from the data analysis, I built a dashboard using Tableau. The dashboard incorperated dynamic visualizations such as barcharts, line graphs and pie charts comparing the Gross Earnings of movies to multiple different variables such as release dates, genres, actors, directors and creators. These visual representations provide an intuitive way to interpret the data and communicate the results effectively. Here is a link to the dashboard with a snapshot shown below. (link)
-** insert pics
+![](Images/Top_grossing_movies_dashboard.png)
 
 ## IBM Database Integration
 To exercise my SQL skills, I loaded the cleaned and processed data into an IBM Db2 Database. This step involved connecting to the database and creating a table to store the movie data. By loading the dataset into a database I gained fresh experince in working with SQL queries, performing data retrieval, and manipulation tasks. To asses and evaluate the data I utilzed ChatGPT-4 to create a sample of test queries that can be seen below.
-** insert pics
+![](Images/imb_db_movies_sql_questions.png)
 
 ## Code and Resource Reference
 Python Verson: 3.7
 Packages: Pandas, BeautifulSoup, requests, PyMovieDb
 Credit: itsmehermant7 creator of PyMovieDb
-Gross Earnings Data: ()
-Tableau Dashboard: ()
+Gross Earnings Data: (https://www.boxofficemojo.com/chart/ww_top_lifetime_gross/?area=XWW&offset=0)
+Tableau Dashboard: (https://public.tableau.com/app/profile/homero.garza/viz/TopGrossingMovies_16863315033850/Dashboard1)
 
 ## Conclusion, Thoughts and Considerations
 Through this project I achieved the following:
@@ -57,6 +57,7 @@ During this project I learning valuable lessons and considerations:
 * Building a dashboard enhanced data visualization and allowed for effective communication of insights across movies and gross earnings.
 * Integration with a database management system provides opportunities for SQL testing and scalability of data storage. 
 
+Overall, this project has provided valuable hands-on experience in data collection, data cleaning, exploratory data analysis, visualizations and databases. It has also offered insight into an industry that I have a deep passion for, giving me a deeper understanding to what goes into the commercial success.
 
 
 
