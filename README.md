@@ -30,7 +30,7 @@ To visually represent the insights gained from the data analysis, I built a dash
 ![](Images/Top_grossing_movies_dashboard.png)
 
 ## IBM Database Integration
-To exercise my SQL skills, I loaded the cleaned and processed data into an IBM Db2 Database. This step involved connecting to the database and creating a table to store the movie data. By loading the dataset into a database I gained fresh experince in working with SQL queries, performing data retrieval, and manipulation tasks. To asses and evaluate the data I utilzed ChatGPT-4 to create a sample of test queries that can be seen below.
+To exercise my SQL skills, I loaded the cleaned and processed data into an IBM Db2 Database. This step involved connecting to the database and creating a table to store the movie data. By loading the dataset into a database I gained fresh experience in working with SQL queries, performing data retrieval, and manipulation tasks. To asses and evaluate the data I utilzed ChatGPT-4 to create a sample of test queries that can be seen below.
 ![](Images/imb_db_movies_sql_questions.png)
 
 ## Code and Resource Reference
