@@ -46,9 +46,9 @@ Tableau Dashboard: (https://public.tableau.com/app/profile/homero.garza/viz/TopG
 
 ## Conclusion, Thoughts and Considerations
 Through this project I achieved the following:
-* Successfully collected data on the top 1000 grossing movies of all time
-* Demonstrated proficiency in web scraping techniques using Beautiful Soup and data collection with PyMovieDb
-* Created a dataframe using Pandas and performed necessary data cleaning and formatting
+* Successfully collected data on the top 1000 grossing movies of all time.
+* Demonstrated proficiency in web scraping techniques using Beautiful Soup and data collection with PyMovieDb.
+* Created a dataframe using Pandas and performed necessary data cleaning and formatting.
 * Conducted Exploratory Data Analysis (EDA) to gain insights into the dataset.
 * Built a dashboard with Tableau to visualize descriptive statistics and provide a user-friendly interface.
 * Loaded the cleaned data into IBM Db2 for SQL integration and evaluation with a database managment system.
@@ -61,7 +61,7 @@ During this project I learning valuable lessons and considerations:
 * Building a dashboard enhanced data visualization and allowed for effective communication of insights across movies and gross earnings.
 * Integration with a database management system provides opportunities for SQL testing and scalability of data storage. 
 
-Overall, this project has provided valuable hands-on experience in data collection, data cleaning, exploratory data analysis, visualizations and databases. It has also offered insight into an industry that I have a deep passion for, giving me a deeper understanding to what goes into the commercial success.
+Overall, this project has provided valuable hands-on experience in data collection, data cleaning, exploratory data analysis, visualizations and databases. It has also offered insight into an industry that I have a deep passion for, giving me a deeper understanding on what goes into the commercial success.
 
 
 
