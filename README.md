@@ -53,7 +53,7 @@ Through this project I achieved the following:
 * Built a dashboard with Tableau to visualize descriptive statistics and provide a user-friendly interface.
 * Loaded the cleaned data into IBM Db2 for SQL integration and evaluation with a database managment system.
 
-During this project I learning valuable lessons and considerations:
+During this project I learned valuable lessons and considerations:
 * Web scraping can be a powerful tool for data collection, but it is essential to understand a websites terms and services to adhere to ethical scraping practices.
 * The PyMovieDb API provided a convenient way to access additional movie information, expanding the scope of the dataset.
 * Data cleaning and formatting are critical steps to ensure accuracy and usability of the data.
