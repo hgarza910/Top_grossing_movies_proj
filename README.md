@@ -14,14 +14,14 @@ I utilized web-scraping techniques with Beautiful Soup a popular python package 
 To gather additional information about the top grossing movies, I made use of the PyMovieDb API. Using the Id's of the movies collected from BoxOfficeMojo I was able to retrieve deatials from IMDB such as Descriptions, Ratings, Keywords, Genres and Film Crew. This provided a more detailed dataset on each movie.
 ![](Images/imdb_df.png)
 ### Data Processing and Cleaning
-The collected data was organized and cleaned using the Pandas library in Python. The cleaning process involved handling missing values, removing duplicates and stadardizing formats.
+The collected data was organized and cleaned using the Pandas library in Python. The cleaning process involved handling missing values, removing duplicates and standardizing formats.
 * Gross Earnings - Converted into numeric values.
 * Ratings - Converted into numeric values.
 * Genres - Removed unnecessary string values and seperated into 3 seperate values.
 * Release - Removed unnecessary string values and converted into Datetime format.
 * Keywords - Removed unnecessary string values.
 * Runtime - Removed unnecessary string values. 
-* Actors - Removed unnecessary string values and seperated int0 3 seperate values.
+* Actors - Removed unnecessary string values and seperated into 3 seperate values.
 * Directors - Removed unnecessary string values and seperated into 3 seperate values.
 * Creators - Removed unnecessary string values and seperated into 3 seperate values.
 ![](Images/top_grossing_cleaned_df.png)
