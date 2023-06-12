@@ -35,9 +35,13 @@ To exercise my SQL skills, I loaded the cleaned and processed data into an IBM D
 
 ## Code and Resource Reference
 Python Verson: 3.9
+
 Packages: Pandas, BeautifulSoup, requests, PyMovieDb
+
 Credit: itsmehermant7 creator of PyMovieDb
+
 Gross Earnings Data: (https://www.boxofficemojo.com/chart/ww_top_lifetime_gross/?area=XWW&offset=0)
+
 Tableau Dashboard: (https://public.tableau.com/app/profile/homero.garza/viz/TopGrossingMovies_16863315033850/Dashboard1)
 
 ## Conclusion, Thoughts and Considerations
